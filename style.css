@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Satoshi', sans-serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    /* background-color: burlywood; */
+}
+main{
+    width: 100%;
+    height: 100%;
+    /* background-color: salmon; */
+}
+.page1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgba(255, 0, 0, 0.441); */
+}
+.page1 .videoContainer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* background-color: aliceblue; */
+}
+nav{
+    position: relative;
+    color: white;
+    padding: 0 3vw;
+    width: 100%;
+    height: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: yellow; */
+}
+.ntop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-color: #FFF555;
+
+}
+
+.nl{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+.nlp2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rgb(155, 108, 108); */
+}
+.nr{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aliceblue; */
+}
+.smallbtn{
+    text-decoration: none;
+    width: 140px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+}
+.smallbtn span{
+    position: relative;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF555;
+    width: 0px;
+    height: 0px;
+    margin-left: 6px;
+    border-radius: 50%;
+    overflow: hidden;
+    color: black;
+    transition: all ease-in-out 0.3s;
+}
+.smallbtn span i{
+    display: inline-block;
+    transform: translateX(-20px);
+    transition: all ease 0.5s;
+}
+.smallbtn:hover i{
+    transform: translateX(0);
+    transition: all ease 0.5s;
+}
+.smallbtn:hover span{
+    width: 25px;
+    height: 25px;
+    transition: all ease-in-out 0.3s;
+}
+
+.pg1content{
+    width: 100%;
+    height: calc(100vh - 7vw);
+    /* background-color: aqua; */
+}
+.pg1l{
+    width: 50%;
+    height: 100%;
+    /* background-color: salmon; */
+}
