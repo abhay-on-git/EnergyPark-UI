@@ -118,12 +118,66 @@ nav{
 }
 
 .pg1content{
+    padding: 0 3vw;
     width: 100%;
     height: calc(100vh - 7vw);
+    display: flex;
     /* background-color: aqua; */
 }
 .pg1l{
-    width: 50%;
+    width: 55%;
     height: 100%;
-    /* background-color: salmon; */
+    color: #FFFFFF;
+    background-color: salmon;
+}
+.pg1l .h1{
+     width: 100%;
+     height: 18%;
+     /* margin: 1vw 0; */
+     display: flex;
+     align-items: center;
+     justify-content: start;
+     background-color: red;
+}
+.pg1l h1{
+    font-size: 8vw;
+    font-weight: 500;
+    letter-spacing: -3px;
+    white-space: nowrap;
+}
+.pg1r{
+    width: 45%;
+    height: 100%;
+    background-color: burlywood;
+}
+.big-btn{
+    position: relative;
+    color: black;
+    padding: 1.5vw;
+    width: 23vw;
+    height: 6vw;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+.big-btn span{
+    position: absolute;
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF555;
+}
+.big-btn span i {
+    font-size: 1.5vw;
+}
+.big-btn:hover span{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
