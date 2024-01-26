@@ -128,7 +128,7 @@ nav{
     width: 55%;
     height: 100%;
     color: #FFFFFF;
-    background-color: salmon;
+    /* background-color: salmon; */
 }
 .pg1l .h1{
      width: 100%;
@@ -137,7 +137,7 @@ nav{
      display: flex;
      align-items: center;
      justify-content: start;
-     background-color: red;
+     /* background-color: red; */
 }
 .pg1l h1{
     font-size: 8vw;
@@ -145,25 +145,36 @@ nav{
     letter-spacing: -3px;
     white-space: nowrap;
 }
+.pg1l h3{
+    white-space: nowrap;
+    z-index: 9999;
+}
+.pg1l h2{
+    white-space: nowrap;
+    font-size: 2.5vw;
+    line-height: 3vw;
+    font-weight: 600;
+}
 .pg1r{
     width: 45%;
     height: 100%;
-    background-color: burlywood;
+    /* background-color: burlywood; */
 }
 .big-btn{
     position: relative;
     color: black;
-    padding: 1.5vw;
-    width: 23vw;
-    height: 6vw;
+    padding: 1.3vw;
+    width: 22vw;
+    height: 5.5vw;
     border-radius: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: white;
+    overflow: hidden;
+    margin: 4vw 0;
 }
 .big-btn span{
-    position: absolute;
     display: inline-block;
     width: 4vw;
     height: 4vw;
@@ -171,13 +182,157 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 99999;
     background-color: #FFF555;
 }
 .big-btn span i {
     font-size: 1.5vw;
 }
-.big-btn:hover span{
+.big-btn::before{
+    display: inline-block;
+    content: "";
+    position: absolute;
+    right: 5%;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    transform-origin: center;
+    transition: all 0.4s ease;
+    /* background-color: #FFF555; */
+}
+.big-btn::after{
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: 60%;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    transform-origin: center;
+    transition: all 0.4s ease;
+    /* background-color: #FFF555; */
+}
+
+.big-btn:hover::before{
+    cursor: pointer;
+    border-radius: 15%;
     width: 100%;
     height: 100%;
+    background-color: #FFF555;
+    transition: all 0.7s ease;
+}
+.big-btn:hover::after{
     cursor: pointer;
+    border-radius: 15%;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF555;
+    transition: all 0.7s ease;
+}
+.page2{
+    padding: 5vw 3vw;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+}
+.page2>h1{
+    font-size: 4vmax;
+    margin-bottom: 2vmax;
+}
+.zero{
+    width: 100%;
+    height: 6vmax;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    /* background-color: #FFF555; */
+}
+.one{
+    position: relative;
+    width: 100%;
+    height: 9vmax;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    /* background-color: #FFF555; */
+}
+.one::before{
+    content: "";
+    width: 100%;
+    height: 0vmax;
+    position: absolute;
+    bottom:0%;
+    transition: all 0.3s ease-in-out;
+    background-color: #FFF555;
+}
+.right-icon{
+    position: relative;
+    width:4%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: 2;
+    overflow: hidden;
+
+}
+.right-icon-in{
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+#h1{
+    z-index: 1;
+    font-size: 3.5vmax;
+    font-weight: 500;
+}
+.one:hover::before{
+    transform-origin: bottom;
+    height: 9vmax;
+    transition: all 0.3s ease-in-out;
+}
+.one:hover .right-icon-in{
+    margin-right: -50px;
+    transition: all 0.3s ease-in-out;
+}
+.page3{
+    width: 100%;
+    padding: 5vmax 3vmax;
+    display: flex;
+    min-height:100vh;
+    background-color: salmon;
+}
+.left{
+    overflow: hidden;
+    margin-top: 5vmax;
+    width: 50%;
+    height: 60vmax;
+    border-radius: 20px;
+    background-color: saddlebrown;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.right{
+    padding-left: 6vmax;
+    margin-top: 5vmax;
+    width: 50%;
+    height: 60vmax;
+    background-color: rgb(142, 106, 80);
+}
+.right h3{
+    margin-bottom: 4vmax;
+}
+.right h1{
+    margin: 1vmax;
+    font-size: 4vmax;
 }
