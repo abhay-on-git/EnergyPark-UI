@@ -11,7 +11,7 @@ html,body{
 }
 main{
     width: 100%;
-    height: 100%;
+    /* min-height: 100%; */
     /* background-color: salmon; */
 }
 .page1{
@@ -383,3 +383,84 @@ img{
     transition: all 2.5s ease-out;
     background-color:black;
 }
+
+.page4{
+    padding: 3vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    width: 100%;
+    min-height: 100vh;
+    background-color: red;
+}
+.pg4in{
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    border-radius: 50px;
+    background-color: rgb(107, 82, 82);
+    overflow: hidden;
+}
+.pg4in h1{
+    position: absolute;
+    z-index: 9;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+    
+}
+.pg4in .big-btn{
+    position: absolute;
+    z-index: 9;
+    bottom: 1%;
+    right: 5%;
+    color: black;
+}
+.pg4in .big-btn h3{
+    z-index: 10;
+}
+.pg4in img{
+    width: 120%;
+    height: 120%;
+}
+.page5{
+    padding: 3vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    width: 100%;
+    min-height: 100vh;
+    background-color: red;
+}
+.top{
+    width: 100%;
+    height:27vw;
+    background-color: yellow;
+}
+/* swiper code */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+  .swiper-slide {
+    width: 5vw;
+    height: 100%;
+    text-align: center;
+    background-color: salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

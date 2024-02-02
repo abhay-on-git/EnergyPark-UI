@@ -1,73 +1,60 @@
+    // Locomotive Code
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector("main"),
+        smooth: true
+    }); 
+
+    
+    // Swiper code
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        centeredSlides: true,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    
+    
+    
     let imgs = document.querySelectorAll('.img');
     let slidingLines = document.querySelectorAll(".slidingLine");
     let lines = document.querySelectorAll(".line");
 
 
-    var tl = gsap.timeline({repeat:-1})
+    var tl = gsap.timeline({ repeat: -1 });
     let i = 0;
-    tl.to(".img",{
-     zIndex : i + 1,
-     width : "100%",
-     height : "100%",
-     stagger :4,
+
+    function animateImages() {
+        tl.to(".img", {
+            zIndex: () => ++i,
+            width: "100%",
+            height: "100%",
+            ease: "power1",
+            stagger: 4,
+            onComplete: () => {
+                tl.to(".img", {
+                    width: "0%",
+                    height: "0%",
+                    onComplete: animateImages 
+                });
+            }
+        });
+    }
+    
+    animateImages(); 
+    
+
+
+    gsap.to(".line",{
+        duration:2,
+        scaleX: 1,
+        ease:Power2,
+        stagger:2,
     })
 
-    //  function pg3() {
-    //     lines.forEach((line, i) => {
-    //         setTimeout(() => {
-    //             // Scale the line up    
-    //             line.style.transform = "scaleX(1)";
-    //             // line.style.transition = "transform 1s ease"; // Apply easing with CSS transition
-    //         }, i * 4000);
-    //     });
-    //     slidingLines.forEach((line,i)=>{
-    //         setTimeout(() => {
-    //             // Slide the line
-    //             line.style.transform = "translate(0%)";
-    //             // line.style.transition = "transform 1s ease"; // Apply easing with CSS transition
-    //         }, i * 5000); // Increased delay for sliding animation
-    //     })
-    //     lines.forEach((line,i)=>{
-    //         setTimeout(() => {
-    //             // Reset line transformations
-    //             line.style.transformOrigin = "right";
-    //             line.style.transform = "scaleX(0)";
-    //         }, i *8000); // Increased delay for resetting animation
-    //         line.style.transformOrigin = "left";
-    //     })
-    //     imgs.forEach((img, i) => {
-    //         // console.log(i)
-    //         setTimeout(() => {
-    //             // Adjust image zIndex and dimensions
-    //             img.style.zIndex = i + 1;
-    //             img.style.width = "100%";
-    //             img.style.height = "100%";
-    //         }, i * 4000);
-    //     });   
-    // }
-
-    // function runAnimation(){
-    //     pg3();
-    //     setInterval(runAnimation,9000);
-    // } 
-    // runAnimation();
-   
-
-    // pg3();
-    // setInterval((e,i) => {
-    //     imgs.forEach((img, i) => {
-    //         // console.log(i)
-    //         setTimeout(() => {
-    //             // Adjust image zIndex and dimensions
-    //             img.style.zIndex = i + 1;
-    //             img.style.width = "100%";
-    //             img.style.height = "100%";
-    //         }, i * 4000);
-    //     });   
-    // }, 4100); 
-
-
-   
 
     
     
