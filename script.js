@@ -7,21 +7,25 @@
     
     // Swiper code
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        centeredSlides: true,
+        slidesPerView: 2.5,
         spaceBetween: 30,
-        grabCursor: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
+        grabCursor:true,
       });
-    
     
     
     let imgs = document.querySelectorAll('.img');
     let slidingLines = document.querySelectorAll(".slidingLine");
     let lines = document.querySelectorAll(".line");
+
+    gsap.from(".page1 h1",{
+        y:100,
+        delay:0.5,
+        ease:Power1,
+    })
 
 
     var tl = gsap.timeline({ repeat: -1 });
