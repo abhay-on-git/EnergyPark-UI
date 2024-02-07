@@ -318,7 +318,7 @@ nav{
     padding: 5vmax 3vmax;
     display: flex;
     min-height:100vh;
-    background-color: salmon;
+    /* background-color: salmon; */
 }
 .left{
     display: flex;
@@ -328,16 +328,18 @@ nav{
     overflow: hidden;
     margin-top: 5vmax;
     width: 50%;
-    height: 60vmax;
+    height: 55vmax;
     border-radius: 20px;
-    background-color: saddlebrown;
+    /* background-color: saddlebrown; */
 }
 .img{
     position: absolute;
     width: 0%;
     height: 0%;
-    transition: all 0.5s ease-out;
-    background-color: aquamarine;
+    transition: all 0.7s ease-out;
+    border-radius: 20px;
+    overflow: hidden;
+    /* background-color: aquamarine; */
 }
 img{
     position: absolute;
@@ -352,14 +354,17 @@ img{
     margin-top: 5vmax;
     width: 50%;
     height: 60vmax;
-    background-color: rgb(142, 106, 80);
+    /* background-color: rgb(142, 106, 80); */
 }
 .right h3{
+    margin-left: 2vmax;
     margin-bottom: 4vmax;
 }
 .right h1{
     margin: 1vmax;
     font-size: 4vmax;
+    font-weight: 500;
+    color: rgba(128, 128, 128, 0.737);
 }
 .line{
     position: relative;
